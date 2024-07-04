@@ -1,0 +1,19 @@
+---
+title: Hong Kong Open Source Conference 2024
+subtitle: Metrics, Logs, Traces and Profiles with Grafana LGTM
+author: Wong Hoi Sing Edison
+date: 2024-07-06
+geometry:
+  - landscape
+slideNumber: true
+header-includes: |
+  <style>
+      .reveal .slides {
+      text-align: left;
+    }
+    .reveal .slides section > * {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  </style>
+---
