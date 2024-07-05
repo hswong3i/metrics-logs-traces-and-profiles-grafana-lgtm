@@ -62,6 +62,11 @@ Vagrant.configure("2") do |config|
     helm upgrade --install prometheus prometheus/kube-prometheus-stack --values /vagrant/helm/prometheus/values.yml --namespace prometheus
     until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
 
+    # Install Grafana
+    helm repo add grafana https://grafana.github.io/helm-charts
+    helm upgrade --install grafana grafana/grafana --values /vagrant/helm/grafana/values.yml --namespace grafana
+    until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
     # Verify Result
     kubectl get node
     kubectl get pod --all-namespaces
