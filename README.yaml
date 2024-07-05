@@ -6,6 +6,8 @@ date: 2024-07-06
 geometry:
   - landscape
 slideNumber: true
+mainfont: Noto Sans
+CJKmainfont: Noto Sans CJK TC
 header-includes: |
   <style>
       .reveal .slides {
