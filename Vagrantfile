@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     libvirt.nested = true
     libvirt.nic_model_type = "virtio"
     libvirt.video_type = "virtio"
-    
+
     libvirt.storage :file, bus: "virtio", cache: "writeback"
     override.vm.synced_folder "./", "/vagrant", type: "virtiofs"
   end
@@ -56,5 +56,14 @@ Vagrant.configure("2") do |config|
     helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
     helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values /vagrant/helm/ingress-nginx/values.yml --namespace ingress-nginx
     until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
+    # Install Prometheus
+    helm repo add prometheus https://prometheus-community.github.io/helm-charts
+    helm upgrade --install prometheus prometheus/kube-prometheus-stack --values /vagrant/helm/prometheus/values.yml --namespace prometheus
+    until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
+    # Verify Result
+    kubectl get node
+    kubectl get pod --all-namespaces
 SHELL
 end
