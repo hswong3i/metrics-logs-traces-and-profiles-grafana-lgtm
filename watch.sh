@@ -4,7 +4,7 @@ set -euxo pipefail
 
 while true
 do
-    inotifywait -e modify README.md || true
-    pandoc -t revealjs -s -o README.html --metadata-file README.yaml README.md
-    pandoc -t pdf -s --toc --pdf-engine=xelatex -o README.pdf --metadata-file README.yaml README.md
+    inotifywait -e modify index.md || true
+    pandoc -t revealjs -s -o index.html --metadata-file index.yaml index.md
+    pandoc -t pdf -s --toc --pdf-engine=xelatex -o index.pdf --metadata-file index.yaml index.md
 done
