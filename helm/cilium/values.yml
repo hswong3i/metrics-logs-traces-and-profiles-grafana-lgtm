@@ -1,0 +1,68 @@
+---
+
+cni:
+  binPath: /opt/cni/bin
+  chainingMode: portmap
+  exclusive: true
+  uninstall: true
+
+enableIPv4BIGTCP: false
+
+enableIPv4Masquerade: true
+
+enableIPv6BIGTCP: false
+
+enableIPv6Masquerade: false
+
+envoy:
+  enabled: false
+
+externalIPs:
+  enabled: true
+
+hostPort:
+  enabled: true
+
+hubble:
+  enabled: false
+
+ipam:
+  mode: cluster-pool
+  operator:
+    clusterPoolIPv4MaskSize: 24
+    clusterPoolIPv4PodCIDRList: 10.233.64.0/18
+
+ipv4:
+  enabled: true
+
+ipv6:
+  enabled: false
+
+k8s:
+  serviceProxyName: nonexistent
+
+kubeProxyReplacement: false
+
+nodePort:
+  enabled: true
+
+nodeinit:
+  enabled: true
+
+nodeinit:
+  securityContext:
+    privileged: true
+
+operator:
+  replicas: 1
+  securityContext:
+    privileged: true
+
+securityContext:
+  privileged: true
+
+sessionAffinity: true
+
+sleepAfterInit: false
+
+tunnel: vxlan

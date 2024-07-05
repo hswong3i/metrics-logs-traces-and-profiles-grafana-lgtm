@@ -1,0 +1,8 @@
+---
+
+controller:
+  allowSnippetAnnotations: true
+  dnsPolicy: ClusterFirstWithHostNet
+  hostNetwork: true
+  kind: DaemonSet
+  reportNodeInternalIp: true

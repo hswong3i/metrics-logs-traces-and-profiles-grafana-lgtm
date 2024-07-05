@@ -32,17 +32,26 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.provision :shell, inline: <<-SHELL
+    set -ex
+
+    # Stop the auto provisioning
     systemctl stop guestfs-firstboot.service
     systemctl disable guestfs-firstboot.service
+
+    # Manually provision Kubernetes
     apt update && apt -y full-upgrade && apt -y autoremove
+    apt -y install helm
     /usr/local/bin/virt-sysprep-firstboot.sh
-    ansible-playbook \
-      /etc/ansible/playbooks/60-kube_cilium-install.yml \
-      /etc/ansible/playbooks/70-kube_csi_hostpath-install.yml \
-      /etc/ansible/playbooks/70-kube_csi_hostpath-verify.yml \
-      /etc/ansible/playbooks/80-kube_ingress_nginx-install.yml
-    kubectl apply -Rf /etc/kubernetes/addons
-    echo "sleep 30..." && sleep 30
-    until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do echo "sleep 10..."; sleep 10; done
+
+    # Install Cilium with Helm
+    apt -y install cilium-cli
+    helm repo add cilium https://helm.cilium.io
+    helm upgrade --install cilium cilium/cilium --values /vagrant/helm/cilium/values.yml --namespace kube-system
+    until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
+    # Install Ingress NGINX Controller
+    helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+    helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values /vagrant/helm/ingress-nginx/values.yml --namespace ingress-nginx --create-namespace
+    until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
 SHELL
 end

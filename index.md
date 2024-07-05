@@ -45,59 +45,6 @@
 
 ![](files/github.com-gayanvoice-top-github-users.png)
 
-## Contact Me
-
-- Address: Unit 326, 3/F, Building 16W, No.16 Science Park West Avenue, Hong Kong Science Park, Shatin, N.T.
-- Phone: +852 3576 3812
-- Fax: +852 3753 3663
-- Email: <sales@pantarei-design.com>
-- Web: <http://pantarei-design.com>
-
-## References
-
-- [Getting started with managing your metrics, logs, and traces using Grafana](https://grafana.com/go/webinar/getting-started-with-grafana-lgtm-stack/)
-- Official webinar from Grafana Labs
-- For beginner with simple show case
-- Around 60 mintues
-
-------------------------------------------------------------------------
-
-![](files/grafana.com-go-webinar-getting-started-with-grafana-lgtm-stack.png)
-
-------------------------------------------------------------------------
-
-- [Introduction to Metrics, Logs, Traces and Profiles in Grafana](https://github.com/grafana/intro-to-mltp)
-- Official complete demo for Grafana LGTM stack
-- For advance user with Docker + Docker Compose experience
-- Around 2 hours
-
-------------------------------------------------------------------------
-
-![](files/github.com-grafana-intro-to-mltp.png)
-
-------------------------------------------------------------------------
-
-- [可觀測性宇宙的第一天 - Grafana LGTM 全家桶的起點](https://ithelp.ithome.com.tw/articles/10319012)
-- Detail explanation for Grafana LGTM + Kubernetes
-- For advance user with daily Kubernetes experience
-- AT LEAST 6 HOURS (reading doc only...)
-
-------------------------------------------------------------------------
-
-![](files/ithelp.ithome.com.tw-articles-10319012.png)
-
-------------------------------------------------------------------------
-
-- [AlviStack Vagrant Box Packaging for Kubernetes](https://github.com/alvistack/vagrant-kubernetes)
-- CNCF Certified Kubernetes on Virtual Box or Libvrt
-- Simply `vagrant up` and ready for use
-- May customize for Dev/CI/CD
-- Around 10 minutes
-
-------------------------------------------------------------------------
-
-![](files/app.vagrantup.com-alvistack-boxes-kubernetes-1.30.png)
-
 # What is Grafana LGTM Stack?
 
 ## Prometheus + LGTM Stack + Pyroscope
@@ -346,3 +293,56 @@
 # Connect with Data Sources
 
 # Q&A
+
+## References
+
+- [Getting started with managing your metrics, logs, and traces using Grafana](https://grafana.com/go/webinar/getting-started-with-grafana-lgtm-stack/)
+- Official webinar from Grafana Labs
+- For beginner with simple show case
+- Around 60 mintues
+
+------------------------------------------------------------------------
+
+![](files/grafana.com-go-webinar-getting-started-with-grafana-lgtm-stack.png)
+
+------------------------------------------------------------------------
+
+- [Introduction to Metrics, Logs, Traces and Profiles in Grafana](https://github.com/grafana/intro-to-mltp)
+- Official complete demo for Grafana LGTM stack
+- For advance user with Docker + Docker Compose experience
+- Around 2 hours
+
+------------------------------------------------------------------------
+
+![](files/github.com-grafana-intro-to-mltp.png)
+
+------------------------------------------------------------------------
+
+- [可觀測性宇宙的第一天 - Grafana LGTM 全家桶的起點](https://ithelp.ithome.com.tw/articles/10319012)
+- Detail explanation for Grafana LGTM + Kubernetes
+- For advance user with daily Kubernetes experience
+- AT LEAST 6 HOURS (reading doc only...)
+
+------------------------------------------------------------------------
+
+![](files/ithelp.ithome.com.tw-articles-10319012.png)
+
+------------------------------------------------------------------------
+
+- [AlviStack Vagrant Box Packaging for Kubernetes](https://github.com/alvistack/vagrant-kubernetes)
+- CNCF Certified Kubernetes on Virtual Box or Libvrt
+- Simply `vagrant up` and ready for use
+- May customize for Dev/CI/CD
+- Around 10 minutes
+
+------------------------------------------------------------------------
+
+![](files/app.vagrantup.com-alvistack-boxes-kubernetes-1.30.png)
+
+## Contact Me
+
+- Address: Unit 326, 3/F, Building 16W, No.16 Science Park West Avenue, Hong Kong Science Park, Shatin, N.T.
+- Phone: +852 3576 3812
+- Fax: +852 3753 3663
+- Email: <sales@pantarei-design.com>
+- Web: <http://pantarei-design.com>
