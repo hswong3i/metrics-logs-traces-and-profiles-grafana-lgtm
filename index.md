@@ -2,9 +2,10 @@
 
 ## Get the Code
 
-- [GitHub Repo](https://github.com/hswong3i/metrics-logs-traces-and-profiles-grafana-lgtm)
-- [GitHub Page](https://hswong3i.github.io/metrics-logs-traces-and-profiles-grafana-lgtm)
-- [Vagrantfile](Vagrantfile)
+- [GitHub Repo](https://github.com/hswong3i/metrics-logs-traces-and-profiles-grafana-lgtm): Source code
+- [GitHub Page](https://hswong3i.github.io/metrics-logs-traces-and-profiles-grafana-lgtm): Online [reveal.js](https://revealjs.com/), converted by [pandoc](https://pandoc.org)
+- [index.pdf](index.pdf): Offline PDF, converted by [pandoc](https://pandoc.org)
+- [Vagrantfile](Vagrantfile): For running demo
 
 ------------------------------------------------------------------------
 
@@ -13,7 +14,7 @@
 ## About Me
 
 - Wong Hoi Sing, Edison (hswong3i)
-- 2005: [Drupal Developer & Contributor](https://drupal.org/user/33940)
+- 2005: [Drupal, Developer & Contributor](https://drupal.org/user/33940)
 - 2008: [HKDUG, Founder](https://groups.drupal.org/drupalhk)
 - 2010: [PantaRei Design, Founder](https://pantarei-design.com)
 - 2020: [HKOSCON 2020, Speaker](https://hkoscon.org/2020/topics/ansible-vm-kubernetes)
@@ -23,27 +24,27 @@
 
 ------------------------------------------------------------------------
 
-![](files/hswong3i.jpg)
+![](files/20231022-062402-b9694589--dsc1528.jpg)
 
 ------------------------------------------------------------------------
 
-![](files/5334654265_c16444a8b0_o.jpg)
+![](files/5334654265-c16444a8b0-o.jpg)
 
 ------------------------------------------------------------------------
 
-![](files/hkoscon.org-2020-topics-ansible-vm-kubernetes.png)
+![](files/hkoscon-org-2020-topics-ansible-vm-kubernetes.png)
 
 ------------------------------------------------------------------------
 
-![](files/landscape.cncf.io-alvistack.png)
+![](files/landscape-cncf-io-alvistack.png)
 
 ------------------------------------------------------------------------
 
-![](files/2022.hkoscon.org-edisonwong.png)
+![](files/2022-hkoscon-org-edisonwong.png)
 
 ------------------------------------------------------------------------
 
-![](files/github.com-gayanvoice-top-github-users.png)
+![](files/github-com-gayanvoice-top-github-users.png)
 
 # What is Grafana LGTM Stack?
 
@@ -70,7 +71,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/prometheus.io.png)
+![](files/prometheus-io.png)
 
 ------------------------------------------------------------------------
 
@@ -80,7 +81,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/github.com-prometheus-community-helm-charts-tree-main-charts-kube-prometheus-stack.png)
+![](files/github-com-prometheus-community-helm-charts-tree-main-charts-kube-prometheus-stack.png)
 
 ## Grafana
 
@@ -90,7 +91,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-oss-grafana.png)
+![](files/grafana-com-oss-grafana.png)
 
 ------------------------------------------------------------------------
 
@@ -99,7 +100,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-docs-grafana-latest-setup-grafana-installation-helm.png)
+![](files/grafana-com-docs-grafana-latest-setup-grafana-installation-helm.png)
 
 ## Loki
 
@@ -109,7 +110,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-oss-loki.png)
+![](files/grafana-com-oss-loki.png)
 
 ------------------------------------------------------------------------
 
@@ -118,7 +119,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-docs-loki-latest-setup-install-helm-install-microservices.png)
+![](files/grafana-com-docs-loki-latest-setup-install-helm-install-microservices.png)
 
 ## Tempo
 
@@ -129,7 +130,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-oss-tempo.png)
+![](files/grafana-com-oss-tempo.png)
 
 ------------------------------------------------------------------------
 
@@ -138,7 +139,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-docs-tempo-latest-setup-helm-chart.png)
+![](files/grafana-com-docs-tempo-latest-setup-helm-chart.png)
 
 ------------------------------------------------------------------------
 
@@ -151,7 +152,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-oss-mimir.png)
+![](files/grafana-com-oss-mimir.png)
 
 ------------------------------------------------------------------------
 
@@ -160,7 +161,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-docs-mimir-latest-set-up-helm-chart.png)
+![](files/grafana-com-docs-mimir-latest-set-up-helm-chart.png)
 
 ## Pyroscope
 
@@ -170,7 +171,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-oss-pyroscope.png)
+![](files/grafana-com-oss-pyroscope.png)
 
 ------------------------------------------------------------------------
 
@@ -179,7 +180,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-docs-pyroscope-latest-deploy-kubernetes-helm.png)
+![](files/grafana-com-docs-pyroscope-latest-deploy-kubernetes-helm.png)
 
 # Demo with AlviStack Vagrant Box
 
@@ -195,23 +196,23 @@
 - Download and install VirtualBox
 - Download and install Extension Pack
 - Verify result
-  - `$ vboxmanage --version`
+  - `vboxmanage --version`
 - <https://www.virtualbox.org/wiki/Downloads>
 
 ------------------------------------------------------------------------
 
-![](files/www.virtualbox.org-wiki-Downloads.png)
+![](files/www-virtualbox-org-wiki-downloads.png)
 
 ## Install Vagrant
 
 - Download and install Vagrant
 - Verify Result
-  - `$ vagrant --version`
+  - `vagrant --version`
 - <https://developer.hashicorp.com/vagrant/install>
 
 ------------------------------------------------------------------------
 
-![](files/developer.hashicorp.com-vagrant-install.png)
+![](files/developer-hashicorp-com-vagrant-install.png)
 
 ## Prepare Vagrantfile
 
@@ -222,11 +223,11 @@
 
 ------------------------------------------------------------------------
 
-![](files/developer.hashicorp.com-vagrant-docs-vagrantfile.png)
+![](files/developer-hashicorp-com-vagrant-docs-vagrantfile.png)
 
 ## `vagrant up`
 
-- `$ vagrant up --provider virtualbox`
+- `vagrant up --provider virtualbox`
 - Running VM with VirtualBox
 - Configure CPU/RAM/Disk
 - Configure network port mapping
@@ -236,22 +237,22 @@
 
 ------------------------------------------------------------------------
 
-![](files/developer.hashicorp.com-vagrant-docs-cli-up.png)
+![](files/developer-hashicorp-com-vagrant-docs-cli-up.png)
 
 ## `vagrant provision`
 
-- `$ vagrant provision`
+- `vagrant provision`
 - Sometime you hope to R&D and debug the provision session
 - After VM up and running you could re-run the provision steps
 - <https://developer.hashicorp.com/vagrant/docs/cli/provision>
 
 ------------------------------------------------------------------------
 
-![](files/developer.hashicorp.com-vagrant-docs-cli-provision.png)
+![](files/developer-hashicorp-com-vagrant-docs-cli-provision.png)
 
-## `$ vagrant ssh`
+## `vagrant ssh`
 
-- `$ vagrant ssh`
+- `vagrant ssh`
 - SSH into VM with user `vagrant`
 - Could switch as `root` with `sudo su -`
 - Host `$PWD` already mount into VM as `/vagrant`
@@ -259,7 +260,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/developer.hashicorp.com-vagrant-docs-cli-ssh.png)
+![](files/developer-hashicorp-com-vagrant-docs-cli-ssh.png)
 
 ## `kubectl get node`
 
@@ -303,7 +304,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/grafana.com-go-webinar-getting-started-with-grafana-lgtm-stack.png)
+![](files/grafana-com-go-webinar-getting-started-with-grafana-lgtm-stack.png)
 
 ------------------------------------------------------------------------
 
@@ -314,7 +315,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/github.com-grafana-intro-to-mltp.png)
+![](files/github-com-grafana-intro-to-mltp.png)
 
 ------------------------------------------------------------------------
 
@@ -325,7 +326,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/ithelp.ithome.com.tw-articles-10319012.png)
+![](files/ithelp-ithome-com-tw-articles-10319012.png)
 
 ------------------------------------------------------------------------
 
@@ -337,7 +338,7 @@
 
 ------------------------------------------------------------------------
 
-![](files/app.vagrantup.com-alvistack-boxes-kubernetes-1.30.png)
+![](files/app-vagrantup-com-alvistack-boxes-kubernetes-1-30.png)
 
 ## Contact Me
 

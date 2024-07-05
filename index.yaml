@@ -5,6 +5,9 @@ author: Wong Hoi Sing, Edison
 date: 2024-07-06
 geometry:
   - landscape
+classoption:
+  - landscape
+colorlinks: true
 slideNumber: true
 mainfont: Noto Sans
 CJKmainfont: Noto Sans CJK TC

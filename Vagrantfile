@@ -43,6 +43,9 @@ Vagrant.configure("2") do |config|
     apt -y install helm
     /usr/local/bin/virt-sysprep-firstboot.sh
 
+    # Create custom namespaces
+    kubectl apply -Rf /vagrant/namespaces
+
     # Install Cilium with Helm
     apt -y install cilium-cli
     helm repo add cilium https://helm.cilium.io
@@ -51,7 +54,7 @@ Vagrant.configure("2") do |config|
 
     # Install Ingress NGINX Controller
     helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-    helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values /vagrant/helm/ingress-nginx/values.yml --namespace ingress-nginx --create-namespace
+    helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values /vagrant/helm/ingress-nginx/values.yml --namespace ingress-nginx
     until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
 SHELL
 end
