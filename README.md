@@ -8,14 +8,16 @@ With Grafana LGTM stack, we could improve our observability with: Loki-for logs,
 
 We will walk you through how to get started with Grafana, including installation with AlviStack DevOps solution, building your first Grafana dashboard, and how you can connect to a wide range of data sources, regardless of where it resides, to get a unified view of your data in a single dashboard.
 
-See <https://hkoscon.org/2024/topic/metrics-logs-traces-and-profiles-grafana-lgtm/>
+See <https://hkoscon.org/2024/topic/metrics-logs-traces-and-profiles-grafana-lgtm>
 
 ## Reference
 
-- <https://2022.hkoscon.org/edisonwong/>
+- <https://2022.hkoscon.org/edisonwong>
 - <https://github.com/grafana/intro-to-mltp>
 - <https://ithelp.ithome.com.tw/articles/10319012>
-- <https://grafana.com/go/webinar/getting-started-with-grafana-lgtm-stack/>
+- <https://grafana.com/go/webinar/getting-started-with-grafana-lgtm-stack>
+- <https://github.com/grafana/helm-charts/tree/main/charts/lgtm-distributed>
+- <https://medium.com/@contact_81356/setting-up-prometheus-grafana-loki-tempo-mimir-for-end-to-end-monitoring-logging-atmosly-b1fb5204e1b4>
 
 ## License
 

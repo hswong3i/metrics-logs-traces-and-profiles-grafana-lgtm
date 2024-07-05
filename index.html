@@ -59,6 +59,22 @@ LGTM</p>
 <h1>Introduction</h1>
 
 </section>
+<section id="get-the-code" class="slide level2">
+<h2>Get the Code</h2>
+<ul>
+<li><a
+href="https://github.com/hswong3i/metrics-logs-traces-and-profiles-grafana-lgtm">GitHub
+Repo</a></li>
+<li><a
+href="https://hswong3i.github.io/metrics-logs-traces-and-profiles-grafana-lgtm">GitHub
+Page</a></li>
+<li><a href="Vagrantfile">Vagrantfile</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/qrcode.png" /></p>
+</section>
 <section id="about-me" class="slide level2">
 <h2>About Me</h2>
 <ul>
@@ -394,23 +410,146 @@ class="title-slide slide level1">
 <h1>Demo with AlviStack Vagrant Box</h1>
 
 </section>
+<section id="system-requirements" class="slide level2">
+<h2>System Requirements</h2>
+<ul>
+<li>Windows 10+</li>
+<li>4 Core CPU (for running a 2 Core CPU VM)</li>
+<li>16GB Memory (for running a 8GB VM)</li>
+<li>50GB SSD</li>
+</ul>
+</section>
 <section id="install-virtualbox" class="slide level2">
 <h2>Install VirtualBox</h2>
+<ul>
+<li>Download and install VirtualBox</li>
+<li>Download and install Extension Pack</li>
+<li>Verify result
+<ul>
+<li><code>$ vboxmanage --version</code></li>
+</ul></li>
+<li><a href="https://www.virtualbox.org/wiki/Downloads"
+class="uri">https://www.virtualbox.org/wiki/Downloads</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/www.virtualbox.org-wiki-Downloads.png" /></p>
 </section>
 <section id="install-vagrant" class="slide level2">
 <h2>Install Vagrant</h2>
+<ul>
+<li>Download and install Vagrant</li>
+<li>Verify Result
+<ul>
+<li><code>$ vagrant --version</code></li>
+</ul></li>
+<li><a href="https://developer.hashicorp.com/vagrant/install"
+class="uri">https://developer.hashicorp.com/vagrant/install</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/developer.hashicorp.com-vagrant-install.png" /></p>
 </section>
 <section id="prepare-vagrantfile" class="slide level2">
 <h2>Prepare Vagrantfile</h2>
+<ul>
+<li>Describe the type of machine</li>
+<li>How to configure these machines</li>
+<li>How to provision these machines</li>
+<li><a href="https://developer.hashicorp.com/vagrant/docs/vagrantfile"
+class="uri">https://developer.hashicorp.com/vagrant/docs/vagrantfile</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/developer.hashicorp.com-vagrant-docs-vagrantfile.png" /></p>
 </section>
 <section id="vagrant-up" class="slide level2">
 <h2><code>vagrant up</code></h2>
+<ul>
+<li><code>$ vagrant up --provider virtualbox</code></li>
+<li>Running VM with VirtualBox</li>
+<li>Configure CPU/RAM/Disk</li>
+<li>Configure network port mapping</li>
+<li>Mount <code>$PWD</code> into VM as <code>/vagrant</code></li>
+<li>Provision after VM is up and running</li>
+<li><a href="https://developer.hashicorp.com/vagrant/docs/cli/up"
+class="uri">https://developer.hashicorp.com/vagrant/docs/cli/up</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/developer.hashicorp.com-vagrant-docs-cli-up.png" /></p>
+</section>
+<section id="vagrant-provision" class="slide level2">
+<h2><code>vagrant provision</code></h2>
+<ul>
+<li><code>$ vagrant provision</code></li>
+<li>Sometime you hope to R&amp;D and debug the provision session</li>
+<li>After VM up and running you could re-run the provision steps</li>
+<li><a href="https://developer.hashicorp.com/vagrant/docs/cli/provision"
+class="uri">https://developer.hashicorp.com/vagrant/docs/cli/provision</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/developer.hashicorp.com-vagrant-docs-cli-provision.png" /></p>
 </section>
 <section id="vagrant-ssh" class="slide level2">
-<h2><code>vagrant ssh</code></h2>
+<h2><code>$ vagrant ssh</code></h2>
+<ul>
+<li><code>$ vagrant ssh</code></li>
+<li>SSH into VM with user <code>vagrant</code></li>
+<li>Could switch as <code>root</code> with <code>sudo su -</code></li>
+<li>Host <code>$PWD</code> already mount into VM as
+<code>/vagrant</code></li>
+<li><a href="https://developer.hashicorp.com/vagrant/docs/cli/ssh"
+class="uri">https://developer.hashicorp.com/vagrant/docs/cli/ssh</a></li>
+</ul>
 </section>
-<section id="httplocalhost8080" class="slide level2">
-<h2>http://localhost:8080/</h2>
+<section class="slide level2">
+
+<p><img
+data-src="files/developer.hashicorp.com-vagrant-docs-cli-ssh.png" /></p>
+</section>
+<section id="kubectl-get-node" class="slide level2">
+<h2><code>kubectl get node</code></h2>
+<pre><code>root@kubernetes-1:~# kubectl get node
+NAME           STATUS   ROLES           AGE     VERSION
+kubernetes-1   Ready    control-plane   9m18s   v1.29.2</code></pre>
+</section>
+<section id="kubectl-get-pod" class="slide level2">
+<h2><code>kubectl get pod</code></h2>
+<pre><code>root@kubernetes-1:~# kubectl get pod --all-namespaces
+NAMESPACE      NAME                                   READY   STATUS    RESTARTS   AGE
+csi-hostpath   csi-hostpath-socat-0                   1/1     Running   0          6m36s
+csi-hostpath   csi-hostpathplugin-0                   8/8     Running   0          6m36s
+kube-system    coredns-76f75df574-2tdbp               1/1     Running   0          9m2s
+kube-system    coredns-76f75df574-g687d               1/1     Running   0          9m2s
+kube-system    kube-addon-manager-kubernetes-1        1/1     Running   0          6m48s
+kube-system    kube-apiserver-kubernetes-1            1/1     Running   0          9m18s
+kube-system    kube-controller-manager-kubernetes-1   1/1     Running   0          9m18s
+kube-system    kube-flannel-ds-kmq79                  1/1     Running   0          6m36s
+kube-system    kube-proxy-vd4qj                       1/1     Running   0          9m2s
+kube-system    kube-scheduler-kubernetes-1            1/1     Running   0          9m18s
+kube-system    snapshot-controller-7b6f9cf9b4-rj5v5   1/1     Running   0          6m36s</code></pre>
+</section>
+<section id="verify-with-browser" class="slide level2">
+<h2>Verify with Browser</h2>
+<ul>
+<li>Check the result (from host, with VirtualBox port mapping enabled in
+Vagrantfile):
+<ul>
+<li><a href="http://localhost:8080"
+class="uri">http://localhost:8080</a></li>
+</ul></li>
+</ul>
 </section></section>
 <section id="create-a-grafana-dashboard"
 class="title-slide slide level1">

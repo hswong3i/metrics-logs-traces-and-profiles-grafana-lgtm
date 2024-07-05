@@ -1,5 +1,15 @@
 # Introduction
 
+## Get the Code
+
+- [GitHub Repo](https://github.com/hswong3i/metrics-logs-traces-and-profiles-grafana-lgtm)
+- [GitHub Page](https://hswong3i.github.io/metrics-logs-traces-and-profiles-grafana-lgtm)
+- [Vagrantfile](Vagrantfile)
+
+------------------------------------------------------------------------
+
+![](files/qrcode.png)
+
 ## About Me
 
 - Wong Hoi Sing, Edison (hswong3i)
@@ -226,17 +236,110 @@
 
 # Demo with AlviStack Vagrant Box
 
+## System Requirements
+
+- Windows 10+
+- 4 Core CPU (for running a 2 Core CPU VM)
+- 16GB Memory (for running a 8GB VM)
+- 50GB SSD
+
 ## Install VirtualBox
+
+- Download and install VirtualBox
+- Download and install Extension Pack
+- Verify result
+  - `$ vboxmanage --version`
+- <https://www.virtualbox.org/wiki/Downloads>
+
+------------------------------------------------------------------------
+
+![](files/www.virtualbox.org-wiki-Downloads.png)
 
 ## Install Vagrant
 
+- Download and install Vagrant
+- Verify Result
+  - `$ vagrant --version`
+- <https://developer.hashicorp.com/vagrant/install>
+
+------------------------------------------------------------------------
+
+![](files/developer.hashicorp.com-vagrant-install.png)
+
 ## Prepare Vagrantfile
+
+- Describe the type of machine
+- How to configure these machines
+- How to provision these machines
+- <https://developer.hashicorp.com/vagrant/docs/vagrantfile>
+
+------------------------------------------------------------------------
+
+![](files/developer.hashicorp.com-vagrant-docs-vagrantfile.png)
 
 ## `vagrant up`
 
-## `vagrant ssh`
+- `$ vagrant up --provider virtualbox`
+- Running VM with VirtualBox
+- Configure CPU/RAM/Disk
+- Configure network port mapping
+- Mount `$PWD` into VM as `/vagrant`
+- Provision after VM is up and running
+- <https://developer.hashicorp.com/vagrant/docs/cli/up>
 
-## http://localhost:8080/
+------------------------------------------------------------------------
+
+![](files/developer.hashicorp.com-vagrant-docs-cli-up.png)
+
+## `vagrant provision`
+
+- `$ vagrant provision`
+- Sometime you hope to R&D and debug the provision session
+- After VM up and running you could re-run the provision steps
+- <https://developer.hashicorp.com/vagrant/docs/cli/provision>
+
+------------------------------------------------------------------------
+
+![](files/developer.hashicorp.com-vagrant-docs-cli-provision.png)
+
+## `$ vagrant ssh`
+
+- `$ vagrant ssh`
+- SSH into VM with user `vagrant`
+- Could switch as `root` with `sudo su -`
+- Host `$PWD` already mount into VM as `/vagrant`
+- <https://developer.hashicorp.com/vagrant/docs/cli/ssh>
+
+------------------------------------------------------------------------
+
+![](files/developer.hashicorp.com-vagrant-docs-cli-ssh.png)
+
+## `kubectl get node`
+
+    root@kubernetes-1:~# kubectl get node
+    NAME           STATUS   ROLES           AGE     VERSION
+    kubernetes-1   Ready    control-plane   9m18s   v1.29.2
+
+## `kubectl get pod`
+
+    root@kubernetes-1:~# kubectl get pod --all-namespaces
+    NAMESPACE      NAME                                   READY   STATUS    RESTARTS   AGE
+    csi-hostpath   csi-hostpath-socat-0                   1/1     Running   0          6m36s
+    csi-hostpath   csi-hostpathplugin-0                   8/8     Running   0          6m36s
+    kube-system    coredns-76f75df574-2tdbp               1/1     Running   0          9m2s
+    kube-system    coredns-76f75df574-g687d               1/1     Running   0          9m2s
+    kube-system    kube-addon-manager-kubernetes-1        1/1     Running   0          6m48s
+    kube-system    kube-apiserver-kubernetes-1            1/1     Running   0          9m18s
+    kube-system    kube-controller-manager-kubernetes-1   1/1     Running   0          9m18s
+    kube-system    kube-flannel-ds-kmq79                  1/1     Running   0          6m36s
+    kube-system    kube-proxy-vd4qj                       1/1     Running   0          9m2s
+    kube-system    kube-scheduler-kubernetes-1            1/1     Running   0          9m18s
+    kube-system    snapshot-controller-7b6f9cf9b4-rj5v5   1/1     Running   0          6m36s
+
+## Verify with Browser
+
+- Check the result (from host, with VirtualBox port mapping enabled in Vagrantfile):
+  - <http://localhost:8080>
 
 # Create a Grafana Dashboard
 
