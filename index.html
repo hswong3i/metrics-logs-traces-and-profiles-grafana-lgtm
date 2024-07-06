@@ -487,18 +487,77 @@ class="uri">http://localhost:8080</a></li>
 
 <p><img data-src="files/localhost-8080.png" /></p>
 </section></section>
-<section id="connect-with-data-sources"
-class="title-slide slide level1">
-<h1>Connect with Data Sources</h1>
-
-</section>
-
+<section>
 <section id="create-a-grafana-dashboard"
 class="title-slide slide level1">
 <h1>Create a Grafana Dashboard</h1>
 
 </section>
+<section id="connect-with-data-sources" class="slide level2">
+<h2>Connect with Data Sources</h2>
+<ul>
+<li>Before show some data with Grafana, we need some data source</li>
+<li>Let’s add the Prometheus endpoint for it</li>
+<li>Set the Prometheus server URL with
+<code>http://prometheus-operated.prometheus.svc.cluster.local:9090</code></li>
+<li>Don’t forget click the <code>Save &amp; test</code> button</li>
+</ul>
+</section>
+<section class="slide level2">
 
+<p><img
+data-src="files/localhost-8080-connections-datasources.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/localhost-8080-connections-datasources-new.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/localhost-8080-connections-datasources-edit-edqwv8x822cxsa.png" /></p>
+</section>
+<section id="create-dashboard" class="slide level2">
+<h2>Create Dashboard</h2>
+<ul>
+<li>Go to <code>Home &gt; Dashboards</code> now we could create
+something new</li>
+<li>Let’s <code>Import dashboard</code> from <a
+href="https://grafana.com/grafana/dashboards"
+class="uri">https://grafana.com/grafana/dashboards</a></li>
+<li>Here we try with <a
+href="https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus"
+class="uri">https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus</a></li>
+<li>So key the <code>Dashboard ID</code> with <code>315</code></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/localhost-8080-dashboards.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/localhost-8080-dashboards-new.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/grafana-com-grafana-dashboards-315-kubernetes-cluster-monitoring-via-prometheus.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/localhost-8080-dashboard-import.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="files/localhost-8080-dashboard-import-2.png" /></p>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="files/http---localhost-8080-d-edqwwabc76t4wd-kubernetes-cluster-monitoring-via-prometheus.png" /></p>
+</section></section>
 <section>
 <section id="qa" class="title-slide slide level1">
 <h1>Q&amp;A</h1>

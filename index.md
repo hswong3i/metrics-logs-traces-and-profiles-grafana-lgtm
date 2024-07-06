@@ -297,9 +297,57 @@
 
 ![](files/localhost-8080.png)
 
-# Connect with Data Sources
-
 # Create a Grafana Dashboard
+
+## Connect with Data Sources
+
+- Before show some data with Grafana, we need some data source
+- Let's add the Prometheus endpoint for it
+- Set the Prometheus server URL with `http://prometheus-operated.prometheus.svc.cluster.local:9090`
+- Don't forget click the `Save & test` button
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-connections-datasources.png)
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-connections-datasources-new.png)
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-connections-datasources-edit-edqwv8x822cxsa.png)
+
+## Create Dashboard
+
+- Go to `Home > Dashboards` now we could create something new
+- Let's `Import dashboard` from <https://grafana.com/grafana/dashboards>
+- Here we try with <https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus>
+- So key the `Dashboard ID` with `315`
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-dashboards.png)
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-dashboards-new.png)
+
+------------------------------------------------------------------------
+
+![](files/grafana-com-grafana-dashboards-315-kubernetes-cluster-monitoring-via-prometheus.png)
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-dashboard-import.png)
+
+------------------------------------------------------------------------
+
+![](files/localhost-8080-dashboard-import-2.png)
+
+------------------------------------------------------------------------
+
+![](files/http---localhost-8080-d-edqwwabc76t4wd-kubernetes-cluster-monitoring-via-prometheus.png)
 
 # Q&A
 
