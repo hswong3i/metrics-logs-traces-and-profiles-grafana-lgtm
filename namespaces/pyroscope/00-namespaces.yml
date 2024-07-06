@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    app.kubernetes.io/name: pyroscope
+    app.kubernetes.io/part-of: pyroscope
+  name: pyroscope

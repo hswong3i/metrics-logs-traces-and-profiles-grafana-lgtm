@@ -158,6 +158,7 @@
 
 - Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/mimir/latest/set-up/helm-chart)
+- EXCLUDE: due to not enough VM memory
 
 ------------------------------------------------------------------------
 
@@ -177,6 +178,7 @@
 
 - Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/pyroscope/latest/deploy-kubernetes/helm)
+- EXCLUDE: due to not enough VM memory
 
 ------------------------------------------------------------------------
 
@@ -288,10 +290,16 @@
 
 - Check the result (from host, with VirtualBox port mapping enabled in Vagrantfile):
   - <http://localhost:8080>
+  - INCLUDE: Prometheus, Grafana, Loki, Tempo
+  - EXCLUDE: Mimir (long-term storage for Prometheus), pyroscope (continuous profiling)
 
-# Create a Grafana Dashboard
+------------------------------------------------------------------------
+
+![](files/localhost-8080.png)
 
 # Connect with Data Sources
+
+# Create a Grafana Dashboard
 
 # Q&A
 

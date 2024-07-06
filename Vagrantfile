@@ -77,6 +77,16 @@ Vagrant.configure("2") do |config|
     helm upgrade --install tempo grafana/tempo-distributed --values /vagrant/helm/tempo/values.yml --namespace tempo
     until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
 
+    # Install Mimir
+    # helm repo add grafana https://grafana.github.io/helm-charts
+    # helm upgrade --install mimir grafana/mimir-distributed --values /vagrant/helm/mimir/values.yml --namespace mimir
+    # until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
+    # Install pyroscope
+    # helm repo add grafana https://grafana.github.io/helm-charts
+    # helm upgrade --install pyroscope grafana/pyroscope --values /vagrant/helm/pyroscope/values.yml --namespace pyroscope
+    # until [ $(kubectl get pod --all-namespaces | grep -v Running | grep -v Completed | wc -l) -eq 1 ]; do sleep 10; done
+
     # Verify Result
     kubectl get node
     kubectl get pod --all-namespaces

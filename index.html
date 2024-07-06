@@ -295,6 +295,7 @@ or even manually</li>
 <li>Here we are going to demo with <a
 href="https://grafana.com/docs/mimir/latest/set-up/helm-chart">distributed
 Helm chart style</a></li>
+<li>EXCLUDE: due to not enough VM memory</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -324,6 +325,7 @@ or even manually</li>
 <li>Here we are going to demo with <a
 href="https://grafana.com/docs/pyroscope/latest/deploy-kubernetes/helm">distributed
 Helm chart style</a></li>
+<li>EXCLUDE: due to not enough VM memory</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -475,18 +477,25 @@ Vagrantfile):
 <ul>
 <li><a href="http://localhost:8080"
 class="uri">http://localhost:8080</a></li>
+<li>INCLUDE: Prometheus, Grafana, Loki, Tempo</li>
+<li>EXCLUDE: Mimir (long-term storage for Prometheus), pyroscope
+(continuous profiling)</li>
 </ul></li>
 </ul>
-</section></section>
-<section id="create-a-grafana-dashboard"
-class="title-slide slide level1">
-<h1>Create a Grafana Dashboard</h1>
-
 </section>
+<section class="slide level2">
 
+<p><img data-src="files/localhost-8080.png" /></p>
+</section></section>
 <section id="connect-with-data-sources"
 class="title-slide slide level1">
 <h1>Connect with Data Sources</h1>
+
+</section>
+
+<section id="create-a-grafana-dashboard"
+class="title-slide slide level1">
+<h1>Create a Grafana Dashboard</h1>
 
 </section>
 
