@@ -95,7 +95,7 @@
 
 ------------------------------------------------------------------------
 
-- Support multiple installation style, e.g. monolithic, microservice, or even manually
+- Support multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/grafana/latest/setup-grafana/installation/helm/)
 
 ------------------------------------------------------------------------
@@ -114,7 +114,7 @@
 
 ------------------------------------------------------------------------
 
-- Suport multiple installation style, e.g. monolithic, microservice, or even manually
+- Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/loki/latest/setup/install/helm/install-microservices/)
 
 ------------------------------------------------------------------------
@@ -134,7 +134,7 @@
 
 ------------------------------------------------------------------------
 
-- Suport multiple installation style, e.g. monolithic, microservice, or even manually
+- Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/tempo/latest/setup/helm-chart)
 
 ------------------------------------------------------------------------
@@ -156,7 +156,7 @@
 
 ------------------------------------------------------------------------
 
-- Suport multiple installation style, e.g. monolithic, microservice, or even manually
+- Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/mimir/latest/set-up/helm-chart)
 - EXCLUDE: due to not enough VM memory
 
@@ -176,7 +176,7 @@
 
 ------------------------------------------------------------------------
 
-- Suport multiple installation style, e.g. monolithic, microservice, or even manually
+- Suport multiple installation style, e.g. monolithic, microservice, or even manually
 - Here we are going to demo with [distributed Helm chart style](https://grafana.com/docs/pyroscope/latest/deploy-kubernetes/helm)
 - EXCLUDE: due to not enough VM memory
 
@@ -302,9 +302,9 @@
 ## Connect with Data Sources
 
 - Before show some data with Grafana, we need some data source
-- Let's add the Prometheus endpoint for it
+- Let’s add the Prometheus endpoint for it
 - Set the Prometheus server URL with `http://prometheus-operated.prometheus.svc.cluster.local:9090`
-- Don't forget click the `Save & test` button
+- Don’t forget click the `Save & test` button
 
 ------------------------------------------------------------------------
 
@@ -321,7 +321,7 @@
 ## Create Dashboard
 
 - Go to `Home > Dashboards` now we could create something new
-- Let's `Import dashboard` from <https://grafana.com/grafana/dashboards>
+- Let’s `Import dashboard` from <https://grafana.com/grafana/dashboards>
 - Here we try with <https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus>
 - So key the `Dashboard ID` with `315`
 
@@ -378,7 +378,7 @@
 - [可觀測性宇宙的第一天 - Grafana LGTM 全家桶的起點](https://ithelp.ithome.com.tw/articles/10319012)
 - Detail explanation for Grafana LGTM + Kubernetes
 - For advance user with daily Kubernetes experience
-- AT LEAST 6 HOURS (reading doc only...)
+- AT LEAST 6 HOURS (reading doc only…)
 
 ------------------------------------------------------------------------
 
